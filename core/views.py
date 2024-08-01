@@ -6,6 +6,7 @@ from .forms import SignUpForm
 def frontpage(request):
     return render(request, "core/frontpage.html")
 
+
 def signup(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
@@ -19,4 +20,4 @@ def signup(request):
     else:
         form = SignUpForm()
 
-    return render(request, 'core/signup.html', {"form": form})
+    return render(request, "core/signup.html", {"form": form})
